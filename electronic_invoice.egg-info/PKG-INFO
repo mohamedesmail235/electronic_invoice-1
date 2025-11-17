@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: electronic_invoice
+Version: 0.0.1
+Summary: sales invoice with QRCode
+Author: mariam
+Author-email: eng.mariam87@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
