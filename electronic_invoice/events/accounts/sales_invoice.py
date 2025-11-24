@@ -19,6 +19,11 @@ def create_qr_code(doc, method):
 	if not hasattr(doc, 'qr_code'):
 		return
 
+
+    for field in ['company', 'tax_id', 'posting_date', 'grand_total', 'total_taxes_and_charges']:
+        if not doc.get(field):
+            frappe.throw(_(f"{field} is required"))
+			
 	# Don't create QR Code if it already exists
 	qr_code = doc.get("qr_code")
 	# if qr_code and frappe.db.exists({"doctype": "File", "file_url": qr_code}):
